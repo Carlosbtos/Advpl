@@ -67,7 +67,6 @@ Static Function ExecSql()
 	Local cSql      := ""
 	Local cQuebra   := "/"
 	Local cSepara   := "\"
-	Local lWeb      := .F.
 	Local lSoma     := .F.
 	Local lSheet    := .F.
 	Local cProcs    := SuperGetMv("ZZ_SPRFUNR",.F.,"SPR_PROTHEUS_RELAT_FUNRURAL_SENAR/SPR_PROTHEUS_RELAT_FUNRURAL")
@@ -87,7 +86,7 @@ Static Function ExecSql()
 	If (cAlTrb)->(!Eof())
 		
 		//StaticCall( GenToExcel, ExpToExcel, cTable, cWorkSheet, (cAlTrb) , lWeb, lSoma, lSheet)
-		U_GenToExcel(cTable, cWorkSheet, (cAlTrb) , lWeb, lSoma, lSheet)
+		U_GenToExcel(cTable, cWorkSheet, (cAlTrb) , lSoma, lSheet)
 		
 	Else
 		
