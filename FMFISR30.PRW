@@ -3,30 +3,30 @@
 #INCLUDE "TOPCONN.CH"
 
 /*
-* Rotina		: FMFISR30 - Minverva S.A.
+* Rotina		: FMFISR30
 * Autor			: Carlos Henrique de Oliveira
 * Data			: 29/04/2021
-* Descricao		: Exportação Excel - Carga Funrural - Reinf R-2055
+* Descricao		: ExportaÃ§Ã£o Excel - Carga Funrural - Reinf R-2055
 * Modulo		: FIS
-* Observações		:
+* ObservaÃ§Ãµes		:
 */
 
 User Function FMFISR30()
 
-	Local cTitle   := "Exportação Excel - Carga FunRural - Reinf R-2055"
-	Local cDescrip := "Exportação Excel para carga das informações referentes ao FunRural - Reinf R-2055"
+	Local cTitle   := "ExportaÃ§Ã£o Excel - Carga FunRural - Reinf R-2055"
+	Local cDescrip := "ExportaÃ§Ã£o Excel para carga das informaÃ§Ãµes referentes ao FunRural - Reinf R-2055"
 	Local bProcess := {|oSelf|Process()}
 	Local aButtons := {}
-	Local cFunction:= "FMFISR30" //AllTrim(FUNNAME())
-	Local cPerg    := "FMFISR30" //AllTrim(FUNNAME())
+	Local cFunction:= "FMFISR30"
+	Local cPerg    := "FMFISR30" 
 
 	Pergunte(cPerg,.t.)
 
-	//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-	//³Utilizacao da funcao ProcLogIni para permitir a gravacao ³
-	//³do log no CV8 quando do uso da classe tNewProcess que    ³
-	//³grava o LOG no SXU (FNC 00000028259/2009)                ³
-	//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+	//ÃšÃ„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Â¿
+	//Â³Utilizacao da funcao ProcLogIni para permitir a gravacao Â³
+	//Â³do log no CV8 quando do uso da classe tNewProcess que    Â³
+	//Â³grava o LOG no SXU (FNC 00000028259/2009)                Â³
+	//Ã€Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã™
 	ProcLogIni(aButtons)
 
 	tNewProcess():New( cFunction, cTitle, bProcess, cDescrip, cPerg )
@@ -34,24 +34,24 @@ User Function FMFISR30()
 Return
 
 /*/{Protheus.doc} ExecSql
-Função de processamento do relatório
+FunÃ§Ã£o de processamento do relatÃ³rio
 @author Carlos Henrique de Oliveira
 @since 16/04/2019
 @version 1.0
-@return Nil, Função não tem retorno
+@return Nil, FunÃ§Ã£o nÃ£o tem retorno
 /*/
 Static Function Process()
 
-	FWMsgRun(, {|oSay| ExecSql() }, "Processando", "Processando relátorio.")
+	FWMsgRun(, {|oSay| ExecSql() }, "Processando", "Processando relÃ¡torio.")
 
 Return
 
 /*/{Protheus.doc} ExecSql
-Função de execucao de query ou procedure
+FunÃ§Ã£o de execucao de query ou procedure
 @author Carlos Henrique de Oliveira
 @since 16/04/2019
 @version 1.0
-@return Nil, Função não tem retorno
+@return Nil, FunÃ§Ã£o nÃ£o tem retorno
 /*/
 Static Function ExecSql()
 
@@ -62,7 +62,7 @@ Static Function ExecSql()
 	Local cDataIni  := DtoS(MV_PAR04)
 	Local cDataFim  := DtoS(MV_PAR05)
 	Local cTipo     := "2" //Carga Funrural - Reinf Evt-2055
-	Local cTable   	:= "Exportação Excel - Carga FunRural - Reinf R-2055 Período De "+DtoC(MV_PAR04)+" a "+DtoC(MV_PAR05)
+	Local cTable   	:= "ExportaÃ§Ã£o Excel - Carga FunRural - Reinf R-2055 PerÃ­odo De "+DtoC(MV_PAR04)+" a "+DtoC(MV_PAR05)
 	Local cWorkSheet:= "R-2055"
 	Local cSql      := ""
 	Local cQuebra   := "/"
@@ -91,7 +91,7 @@ Static Function ExecSql()
 		
 	Else
 		
-		Aviso("Sem Informações","Não há informações para os parâmetros informados!",{"Ok"}, 2)
+		Aviso("Sem InformaÃ§Ãµes","NÃ£o hÃ¡ informaÃ§Ãµes para os parÃ¢metros informados!",{"Ok"}, 2)
 		
 	EndIf
 
