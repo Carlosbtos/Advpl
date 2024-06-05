@@ -3,10 +3,10 @@
 #INCLUDE "TOPCONN.CH"
 
 /*
-* Rotina		: FMFISR29
+* Rotina		: EXEMPLO
 * Autor			: Carlos Henrique de Oliveira
-* Data			: 29/04/2021
-* Descricao		: Relatório de Conferência FunRural - Reinf
+* Data			: 05/06/2024
+* Descricao		: Exemplo de utilização da rotina GenToExcel
 * Modulo		: FIS
 * Observações		:
 */
@@ -19,8 +19,6 @@ User Function FMFISR29()
 	Local aButtons := {}
 	Local cFunction:= "FMFISR29" 
 	Local cPerg    := "FMFISR29"
-	
-	ValidPerg(cPerg) 
 		
 	Pergunte(cPerg,.F.)
 	
@@ -36,9 +34,9 @@ User Function FMFISR29()
 Return   
 
 /*/{Protheus.doc} ExecSql
-Função de processamento do relatório 
+Função de processamento da rotina de exportação
 @author Carlos Henrique de Oliveira
-@since 16/04/2019
+@since 05/06/2024
 @version 1.0
 	@return Nil, Função não tem retorno
 /*/
@@ -51,7 +49,7 @@ Return
 /*/{Protheus.doc} ExecSql
 Função de execucao de query ou procedure 
 @author Carlos Henrique de Oliveira
-@since 16/04/2019
+@since 05/06/2024
 @version 1.0
 	@return Nil, Função não tem retorno
 /*/
