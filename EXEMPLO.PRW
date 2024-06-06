@@ -79,7 +79,6 @@ Static Function ExecSql()
 	
 		U_GenToExcel(cTable, cWorkSheet, (cAlTrb) , lSoma, lSheet) 
 
-		
 	Else
 	
 		Aviso("Sem Informações","Não há informações para os parâmetros informados!",{"Ok"}, 2)  
