@@ -78,8 +78,7 @@ Else
 		cRootPath := GetSRVProfString("ROOTPATH","")  
 		cArquivo  := cGetFile( ,"Selecione o local para salvar a planilha",, cRootPath, .F., ;
 		nOR( GETF_LOCALHARD, GETF_LOCALFLOPPY, GETF_RETDIRECTORY ),.T., .T. )  
-		
-	
+
 		//Verificando se foi informado o nome para o arquivo
 		If Substr(cArquivo,Len(cArquivo),1) != "\"   
 		
