@@ -11,14 +11,14 @@
 * Observações		:
 */
 
-User Function FMFISR29()
+User Function EXEMPLO()
 
 	Local cTitle   := "Exemplo de Exportação para o Excel"
 	Local cDescrip := "Rotina de exemplo de Exportação para o Excel"
 	Local bProcess := {|oSelf|Process()}
 	Local aButtons := {}
-	Local cFunction:= "FMFISR29" 
-	Local cPerg    := "FMFISR29"
+	Local cFunction:= "EXEMPLO" 
+	Local cPerg    := "EXEMPLO"
 		
 	Pergunte(cPerg,.F.)
 	
