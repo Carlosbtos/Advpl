@@ -26,7 +26,7 @@ Return
 /*/{Protheus.doc} ExpToExcel
 Função para exportar as informações para o excel no forma xml
 @author Carlos Henrique de Oliveira
-@since 15/09/2017
+@since 05/06/2024
 @version 1.0
 	@return Nil, Função não tem retorno
 /*/
